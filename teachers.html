@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Teachers - Learning Tree House Kindergarten</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff5e6;
+        }
+
+        header {
+            background-color: #28a745;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #teachers {
+            background-color: #fff;
+        }
+
+        #teachers h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #ff4500;
+        }
+
+        .teacher-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .teacher-card {
+            background-color: #f0fff0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .teacher-card h3 {
+            color: #28a745;
+            margin-bottom: 0.5rem;
+        }
+
+        .teacher-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .teacher-card p {
+            font-size: 1rem;
+        }
+
+        footer {
+            background-color: #28a745;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            #teachers h2 {
+                font-size: 2rem;
+            }
+            nav ul {
+                gap: 1rem;
+            }
+            nav a {
+                font-size: 1rem;
+            }
+            .teacher-card img {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Learning Tree House Kindergarten</div>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="index.html#fees">Fees</a></li>
+                <li><a href="teachers.html">Teachers</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="teachers" class="section">
+        <h2>Meet Our Teachers</h2>
+        <p>Our dedicated and caring teachers create a nurturing environment to help your child grow and learn!</p>
+        <div class="teacher-grid">
+            <div class="teacher-card">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" alt="Teacher Sarah">
+                <!-- For local image: <img src="images/teacher-sarah.jpg" alt="Teacher Sarah"> -->
+                <h3>Ms. Sarah Green</h3>
+                <p>Preschool Teacher with 5 years of experience, passionate about storytelling and art.</p>
+            </div>
+            <div class="teacher-card">
+                <img src="https://images.unsplash.com/photo-1596495578065-6e0767e69d67?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" alt="Teacher James">
+                <!-- For local image: <img src="images/teacher-james.jpg" alt="Teacher James"> -->
+                <h3>Mr. James Oak</h3>
+                <p>Pre-K Teacher specializing in early literacy and social skills development.</p>
+            </div>
+            <div class="teacher-card">
+                <img src="https://images.unsplash.com/photo-1573497019236-17f8177b81de?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" alt="Teacher Lily">
+                <!-- For local image: <img src="images/teacher-lily.jpg" alt="Teacher Lily"> -->
+                <h3>Ms. Lily Maple</h3>
+                <p>After-School Coordinator who loves music and outdoor activities.</p>
+            </div>
+            <div class="teacher-card">
+                <img src="https://images.unsplash.com/photo-1596495717796-8a8ffb7e7b3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" alt="Teacher Emma">
+                <!-- For local image: <img src="images/teacher-emma.jpg" alt="Teacher Emma"> -->
+                <h3>Mrs. Emma Birch</h3>
+                <p>Lead Teacher with 10 years of experience, focused on creative play-based learning.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Learning Tree House Kindergarten. All rights reserved.</p>
+    </footer>
+</body>
+</html>

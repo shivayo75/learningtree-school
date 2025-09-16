@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-Curricular Activities - Learning Tree House Kindergarten</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff5e6;
+        }
+
+        header {
+            background-color: #28a745;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #activities {
+            background-color: #fff;
+        }
+
+        #activities h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #ff4500;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .activity-card {
+            background-color: #f0fff0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .activity-card h3 {
+            color: #28a745;
+            margin-bottom: 0.5rem;
+        }
+
+        .activity-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #28a745;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            #activities h2 {
+                font-size: 2rem;
+            }
+            nav ul {
+                gap: 1rem;
+            }
+            nav a {
+                font-size: 1rem;
+            }
+            .activity-card img {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Learning Tree House Kindergarten</div>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="index.html#fees">Fees</a></li>
+                <li><a href="teachers.html">Teachers</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="activities" class="section">
+        <h2>Co-Curricular Activities</h2>
+        <p>Our co-curricular activities spark joy and growth, helping children develop creativity, confidence, and teamwork!</p>
+        <div class="activity-grid">
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1577896817891-7f4b242d7f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" alt="Art and craft">
+                <!-- For local image: <img src="images/art-craft.jpg" alt="Art and craft"> -->
+                <h3>Art & Craft</h3>
+                <p>Painting, drawing, and crafting projects to inspire creativity and fine motor skills.</p>
+            </div>
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" alt="Music and dance">
+                <!-- For local image: <img src="images/music-dance.jpg" alt="Music and dance"> -->
+                <h3>Music & Dance</h3>
+                <p>Singing, dancing, and playing instruments to build rhythm and coordination.</p>
+            </div>
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" alt="Sports and games">
+                <!-- For local image: <img src="images/sports-games.jpg" alt="Sports and games"> -->
+                <h3>Sports & Games</h3>
+                <p>Outdoor games like running and ball play to promote fitness and collaboration.</p>
+            </div>
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1598928636135-d146006ff4be?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" alt="Drama and storytelling">
+                <!-- For local image: <img src="images/drama-storytelling.jpg" alt="Drama and storytelling"> -->
+                <h3>Drama & Storytelling</h3>
+                <p>Role-playing and storytelling sessions to boost imagination and communication.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Learning Tree House Kindergarten. All rights reserved.</p>
+    </footer>
+</body>
+</html>

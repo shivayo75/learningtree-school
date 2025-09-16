@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Tree House Kindergarten</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff5e6;
+        }
+
+        header {
+            background-color: #28a745;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #home {
+            background-color: #e6f3ff;
+            background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            /* For local image: background-image: url('images/home.jpg'); */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #home p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        #about, #programs, #fees {
+            background-color: #fff;
+        }
+
+        #about h2, #programs h2, #fees h2, #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ff4500;
+        }
+
+        #about img {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        #programs .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .program-card {
+            background-color: #f0fff0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .program-card h3 {
+            color: #28a745;
+            margin-bottom: 0.5rem;
+        }
+
+        .program-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        #fees .fee-table {
+            max-width: 800px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #f0fff0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #fees th, #fees td {
+            padding: 1rem;
+            border: 1px solid #ccc;
+            font-size: 1.1rem;
+        }
+
+        #fees th {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        #fees tr:nth-child(even) {
+            background-color: #e6f3e6;
+        }
+
+        #fees img {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        #contact {
+            background-color: #e6f3ff;
+            background-image: url('https://images.unsplash.com/photo-1596522354195-6f3773d22aa8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            /* For local image: background-image: url('images/contact.jpg'); */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 0.8rem;
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            font-size: 1rem;
+            background-color: #fff;
+        }
+
+        .contact-form button {
+            padding: 0.8rem;
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .contact-form button:hover {
+            background-color: #e63900;
+        }
+
+        footer {
+            background-color: #28a745;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            #home h1, #about h2, #programs h2, #fees h2, #contact h2 {
+                font-size: 2rem;
+            }
+            nav ul {
+                gap: 1rem;
+            }
+            nav a {
+                font-size: 1rem;
+            }
+            #fees th, #fees td {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+            .program-card img, #about img {
+                height: 120px;
+            }
+            #fees img {
+                max-width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Learning Tree House Kindergarten</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#fees">Fees</a></li>
+                <li><a href="teachers.html">Teachers</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <h1>Welcome to Learning Tree House Kindergarten</h1>
+        <p>A joyful place where young minds blossom through play, learning, and creativity!</p>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <img src="https://images.unsplash.com/photo-1580983561371-7f4b242d7f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kindergarten environment">
+        <!-- For local image: <img src="images/about.jpg" alt="Kindergarten environment"> -->
+        <p>Learning Tree House Kindergarten nurtures children aged 3-6 in a warm, tree-inspired environment. Our dedicated teachers encourage curiosity, teamwork, and a love for learning through hands-on, play-based activities.</p>
+        <p>Come grow with us in our tree house of knowledge!</p>
+    </section>
+
+    <section id="programs" class="section">
+        <h2>Our Programs</h2>
+        <div class="program-grid">
+            <div class="program-card">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bf71533255?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" alt="Preschool activities">
+                <!-- For local image: <img src="images/preschool.jpg" alt="Preschool activities"> -->
+                <h3>Preschool</h3>
+                <p>Engaging activities for 3-4 year olds, including crafts, stories, and early math.</p>
+            </div>
+            <div class="program-card">
+                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" alt="Pre-K learning">
+                <!-- For local image: <img src="images/prek.jpg" alt="Pre-K learning"> -->
+                <h3>Pre-K</h3>
+                <p>Building skills for 4-5 year olds with reading, writing, and social development.</p>
+            </div>
+            <div class="program-card">
+                <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" alt="After-school activities">
+                <!-- For local image: <img src="images/afterschool.jpg" alt="After-school activities"> -->
+                <h3>After-School Care</h3>
+                <p>Fun and creative support for kids up to age 6, with activities and homework help.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="fees" class="section">
+        <h2>Fee Structure</h2>
+        <img src="https://images.unsplash.com/photo-1556742524-750f5a4b86af?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Payment icon">
+        <!-- For local image: <img src="images/fee-icon.jpg" alt="Payment icon"> -->
+        <table class="fee-table">
+            <thead>
+                <tr>
+                    <th>Program</th>
+                    <th>Duration</th>
+                    <th>Annual Fee</th>
+                    <th>Additional Costs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Preschool</td>
+                    <td>3 hours/day</td>
+                    <td>$3,200</td>
+                    <td>$150 (Art Supplies)</td>
+                </tr>
+                <tr>
+                    <td>Pre-K</td>
+                    <td>4 hours/day</td>
+                    <td>$4,200</td>
+                    <td>$200 (Materials + Excursions)</td>
+                </tr>
+                <tr>
+                    <td>After-School Care</td>
+                    <td>2 hours/day</td>
+                    <td>$1,600</td>
+                    <td>$100 (Activity Supplies)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-top: 1rem; font-size: 1rem;">Note: Fees may vary. Please contact us for flexible payment options or financial assistance.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="tel" id="phone" placeholder="Your Phone Number" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button onclick="submitForm()">Send Message</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Learning Tree House Kindergarten. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && phone && message) {
+                alert('Thank you for your message! We'll get back to you soon.');
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('phone').value = '';
+                document.getElementById('message').value = '';
+            } else {
+                alert('Please complete all fields.');
+            }
+        }
+
+        // Smooth scrolling for in-page links
+        document.querySelectorAll('nav a:not([href="activities.html"], [href="teachers.html"])').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
